@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efa's Portofolio</title>
+</head>
+<body>
+    <div class="cursor"></div> <!-- for custom cursor -->
+    <div class="container">
+        <header class="header">
+        <a href="#hero" class="logo">Efa <span>Tariku</span></a>
+        <nav class="nav" >
+            <img src="./img/menu.png" alt="menu icon" class="menu-icon" onclick="togglemenu()">
+            <ul class="nav__list " id="menu-lis">
+                <a href="#home" class="nav__link">Home</a>
+               <a href="#about" class="nav__link">About</a>
+                <a href="#project" class="nav__link">Projects</a>
+                <a href="#contact" class="nav__link">Contact</a>
+            </ul>
+        </nav>
+    </header> 
+   
+    <section class="home" id="home">
+        <div class="home_container">
+            <h1 class="home_title">Hi, I am <span>Efa</span></h1>
+            <h3 class="animated-text">I'm a:  <span></span></h3>
+            <p class="home_description">
+                I'm a web developer and a software engineer.
+                I'm passionate about creating web applications 
+                and software that can help people in their daily life.
+                I am also student at <span><a href="https://www.alxafrica.com/" target="_blank" style="color: inherit;">ALX</a></span></p>
+            <div class="social-icons">
+                <a href="https://github.com/efa07" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://t.me/@Efa_Tariku" target="_blank"><i class="fa-brands fa-telegram" ></i></a>
+                <a href="mailto:efatariku07@gmail.com" target="_blank"><i class="fa-regular fa-envelope" ></i></a>
+                <a href="https://www.linkedin.com/in/efa-tariku-39509a29a/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a>
+            </div>
+            <div class="btn-group">
+                <a href="" class="btn">Hire</a>
+                <a href="" class="btn">Contact</a>
+            </div>
+            </div>
+            <div class="border">
+                <div class="home-img">
+                <img src="./img/photo_2022-07-01_15-23-51.jpg" alt="efa's img" class="home_img">
+            </div>
+            </div>
+        </div>
+    </section>
+<section id="about">
+        <div class="con">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <img src="./img/pk.jpg" alt="efa" class="about-photo">
+                <div class="about-text">
+                    <p>Hi, I'm Efa Tariku, a passionate and dedicated software engineering student at ALX School, currently honing my skills to become a full-stack software developer. My journey in tech began with a curiosity for how things work, which soon transformed into a deep-seated passion for coding and problem-solving.</p>
+                    <p>I have completed a comprehensive Responsive Web Design course from freeCodeCamp, where I learned to create visually appealing and user-friendly web interfaces. Additionally, I have strengthened my programming foundation with various Python courses, which have equipped me with the skills to build efficient and scalable software solutions.</p>
+                    <p>My educational journey has been complemented by numerous projects that showcase my ability to apply theoretical knowledge to practical scenarios. Whether it's developing dynamic web applications or writing clean, efficient code, I am committed to continuous learning and improvement.</p>
+                    <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and staying updated with industry trends. My goal is to leverage my skills and knowledge to contribute to impactful projects and grow as a proficient full-stack developer.</p>
+                    <p>Feel free to browse through my portfolio to see some of the projects I've worked on. I'm excited to connect with like-minded professionals and explore opportunities for collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="project" id="project">
+        <div class="con">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-container">
+                <div class="project-content">
+                    <div class="card">
+                        <img src="./img/project/medical.jpg" alt="Project Image">
+                        <div class="card-content">
+                            <h2 class="card-title">PatientCare-Hub</h2>
+                            <p class="card-description">PatientCare-Hub is a React web application designed to store patient data 
+                                and allow doctors to access past patient history and data. The application is currently under development 
+                                and does not yet have a backend..</p>
+                            <div class="card-links">
+                
+                                <a href="https://github.com/efa07/PatientCare-Hub" target="_blank">View Project</a>
+                                <a href="https://github.com/efa07/PatientCare-Hub" target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="card">
+                            <img src="./img/project/shell.jpg" alt="Project Image">
+                            <div class="card-content">
+                                <h2 class="card-title">Simple Shell</h2>
+                                <p class="card-description">
+                                    a simple UNIX shell implementation written in C. The shell provides a command-line interface for users 
+                                    to interact with the operating system by executing commands, managing processes, and performing basic file operations.
+                                </p>
+                                <div class="card-links">
+                                    <a href="https://github.com/Bellannj/simple_shell">View Project</a>
+                                    <a href="https://github.com/Bellannj/simple_shell">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="card">
+                            <img src="./img/project/binary.png" alt="Project Image">
+                            <div class="card-content">
+                                <h2 class="card-title">Binary Trees</h2>
+                                <p class="card-description">This project a is part of the ALX Software Engineering Program, which aims to provide a deep understanding
+                                    of data structures and algorithms<br><br><br>
+                                </p>
+                                <div class="card-links">
+                                    <a href="https://github.com/efa07/binary_trees">View Project</a>
+                                    <a href="https://github.com/efa07/binary_trees">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   <div class="project-item">
+                        <div class="card">
+                            <img src="./img/project/phone.webp" alt="Project Image">
+                            <div class="card-content">
+                                <h2 class="card-title">Phone Validator</h2>
+                                <p class="card-description">A simple US phone number validator implemented using 
+                                    vanilla JavaScript, HTML, and CSS. <br><br><br> </p>
+                                <div class="card-links">
+                                    <a href="#">View Project</a>
+                                    <a href="#">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   <div class="project-item">
+                        <div class="card">
+                            <img src="./img/project/sorting.png" alt="Project Image">
+                            <div class="card-content">
+                                <h2 class="card-title">sorting_algorithm</h2>
+                                <p class="card-description">A projects focused on the implementation 
+                                    and analysis of various sorting algorithms in C.<br><br><br></p>
+                                <div class="card-links">
+                                    <a href="https://github.com/efa07/US-phone-number-validtor" target="_blank">View Project</a>
+                                    <a href="https://github.com/efa07/US-phone-number-validtor" target="_blank">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="card">
+                            <img src="./img/project/air.jpg" alt="Project Image">
+                            <div class="card-content">
+                                <h2 class="card-title">Project Title</h2>
+                                <p class="card-description">The AirBnB website clone is is a clone of the popular AirBnB web app
+                                    it is made by combining python shell javascript html and css.<br><br>
+                                </p>
+                                <div class="card-links">
+                                    <a href="https://github.com/efa07/AirBnB_clone_v4" target="_blank">View Project</a>
+                                    <a href="https://github.com/efa07/AirBnB_clone_v4" target="_blank">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+           
+
+        </div>
+        
+
+       
+    </section>
+    <section class="contact" id="contact">
+        
+          <div class="contact-container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="row">
+              
+              <div class="contact-info">
+                <div class="contact-info-item">
+                    <img src="./img/project/addres.svg">
+
+                  <div class="contact-info-content">
+                    <h4>Address</h4>
+                    <p>Ethiopia<br/>Addis Ababa, Bole sub city <br/>1000</p>
+                  </div>
+                </div>
+                
+                <div class="contact-info-item">
+                 <img src="./img/project/call.png" alt="">
+                  <div class="contact-info-content">
+                    <h4>Phone</h4>
+                    <p>+251-968595245</p>
+                  </div>
+                </div>
+                
+                <div class="contact-info-item">
+                  <img src="./img/project/email.svg">
+                  <div class="contact-info-content">
+                    <h4>Email</h4>
+                   <p>efatariku07@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="contact-form">
+                <form action="" id="contact-form">
+                  <h2>Send Message</h2>
+                  <div class="input-box">
+                    <input type="text" required="true" name="" placeholder="Full Name">
+                    
+                  </div>
+                  
+                  <div class="input-box">
+                    <input type="email" required="true" name="" placeholder="Email">
+                    
+                  </div>
+                  
+                  <div class="input-box">
+                    <textarea required="true" name="" placeholder="Type your Message..." class="textarea"></textarea>
+                    
+                  </div>
+                  
+                  <div class="input-box">
+                    <input type="submit" value="Send" name="">
+                  </div>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+    </section>
+    </div>
+
+
+    <script>
+        let menulis = document.getElementById('menu-lis')
+        function togglemenu(){
+            if(menulis.style.display === 'block'){
+                menulis.style.display = 'none';
+            }else{
+                menulis.style.display='block'
+            }
+        }
+        document.addEventListener('mousemove', e => {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+    </script>
+</body>
+</html>
