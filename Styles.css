@@ -585,9 +585,7 @@ backdrop-filter: blur(5.9px);
         outline: none;
         border: 1px solid var(--green);
         background-color: #080808;
-        
     }
-   
     .header .logo{
         font-size: 30px;
     }
@@ -607,21 +605,21 @@ backdrop-filter: blur(5.9px);
         transparent 3px
     );
     }
-   
     nav ul a{
         display: block;
         margin-top: 10px;
         margin-bottom: 10px;
-        
     }
     .home{
         margin: 90px 0 0 0;
         padding: 10px;
         width: 100%;
         display: grid;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr;
-       
     }
     .home_container{
         width: 90vw;
@@ -634,6 +632,7 @@ backdrop-filter: blur(5.9px);
         grid-template-rows: 1fr 1fr;
         padding: 10px;
         gap: 25px;
+        margin: 0 0 0 60px;
     }
     .btn-group{
         padding: 10px;
@@ -641,7 +640,6 @@ backdrop-filter: blur(5.9px);
         justify-content: center;
         align-items: center;
         gap: 20px;
-
     }
     .btn-group .btn{
         width: 150px;
@@ -651,6 +649,10 @@ backdrop-filter: blur(5.9px);
 .border{
     width: 350px;
     height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 30px;
 
 }
 .home-img{
