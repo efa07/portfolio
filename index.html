@@ -46,7 +46,7 @@
             </div>
             <div class="btn-group">
                 <a href="mailto:efatariku07@gmail.com" class="btn">Hire</a>
-                <a href="mailto:efatariku07@gmail.com" class="btn">Contact</a>
+                <button class="btn" onclick="changeColor()" id="color">Theme</button>
             </div>
             </div>
             <div class="border">
@@ -231,6 +231,29 @@
             cursor.style.left = e.pageX + 'px';
             cursor.style.top = e.pageY + 'px';
         });
+        function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function changeColor() {
+        const colorbtn = document.getElementById('color')
+        const root = document.documentElement;
+      const currentColor = getComputedStyle(root).getPropertyValue('--green').trim();
+      if (currentColor === '#16db65' && 'rgba(136, 228, 90, 0.055)') {
+        root.style.setProperty('--green', 'red');
+        root.style.setProperty('--about-text', 'rgba(228, 90, 90, 0.055)');
+        colorbtn.innerHTML = "Green"
+      } else {
+        root.style.setProperty('--green', '#16db65');
+        root.style.setProperty('--about-text', 'rgba(136, 228, 90, 0.055)');
+        colorbtn.innerHTML = "Red"
+      }
+    }
     </script>
 </body>
 </html>
