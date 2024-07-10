@@ -10,7 +10,47 @@ html{
     max-width: calc(100% - 10px);
     margin: 0 auto 0 auto;
 }
-
+.eyes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .eye {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid var(--green);
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .pupil {
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--green);
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inner{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: var(--green);
+  }
+  @media only screen and (max-width: 768px) {
+    .eyes-container {
+      display: none;
+    }
+  }
 *{
     margin: 0;
     padding: 0;
@@ -152,7 +192,7 @@ section{
     align-items: center;
     justify-content: space-around;
     grid-area: 15rem; 
-    transition: 2s ease-in-out;
+    transition: 1.5s ease-in-out;
     
 }
 span{
@@ -395,6 +435,7 @@ backdrop-filter: blur(5.9px);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 40px;
+    padding: 10px;
     justify-content: center;
 }
 .card {

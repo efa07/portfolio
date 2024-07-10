@@ -64,3 +64,18 @@ const observer = new IntersectionObserver((entries) => {
     
         const hidenele = document.querySelectorAll('.hidden');
         hidenele.forEach((el) => observer.observe(el));
+
+
+        document.addEventListener('mousemove', (event) => {
+            const eyes = document.querySelectorAll('.eye');
+            eyes.forEach((eye) => {
+              const pupil = eye.querySelector('.pupil');
+              const eyeRect = eye.getBoundingClientRect();
+              const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+              const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+              const angle = Math.atan2(event.clientY - eyeCenterY, event.clientX - eyeCenterX);
+              const pupilX = 25 * Math.cos(angle);
+              const pupilY = 25 * Math.sin(angle);
+              pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+            });
+          });
