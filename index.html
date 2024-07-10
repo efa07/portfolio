@@ -20,7 +20,7 @@
         <header class="header">
         <a href="#hero" class="logo">Efa <span>Tariku</span></a>
         <nav class="nav" >
-            <img src="./img/menu.png" alt="menu icon" class="menu-icon" onclick="togglemenu()">
+            <img src="./icons/menu.png" alt="menu icon" class="menu-icon" id="menu-icon" onclick="togglemenu()">
             <ul class="nav__list " id="menu-lis">
                 <a href="#home" class="nav__link">Home</a>
                <a href="#about" class="nav__link">About</a>
@@ -41,14 +41,10 @@
                 I am also student at <span><a href="https://www.alxafrica.com/" target="_blank" style="color: inherit;">ALX</a></span>
             </p>
             <div class="social-icons">
-                <div class="icons">                <a href="https://github.com/efa07" target="_blank"><i class="fa-brands fa-github"></i></a>
-</div>
-                <div class="icons">                <a href="https://t.me/@Efa_Tariku" target="_blank"><i class="fa-brands fa-telegram" ></i></a>
-</div>
-                <div class="icons">                <a href="mailto:efatariku07@gmail.com" target="_blank"><i class="fa-regular fa-envelope" ></i></a>
-</div>
-                <div class="icons">                <a href="https://www.linkedin.com/in/efa-tariku-39509a29a/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a>
-</div>
+                <div class="icons"><a href="https://github.com/efa07" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                <div class="icons"><a href="https://t.me/@Efa_Tariku" target="_blank"><i class="fa-brands fa-telegram" ></i></a></div>
+                <div class="icons"><a href="mailto:efatariku07@gmail.com" target="_blank"><i class="fa-regular fa-envelope" ></i></a></div>
+                <div class="icons"><a href="https://www.linkedin.com/in/efa-tariku-39509a29a/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a></div>
             </div>
             <div class="btn-group">
                 <a href="mailto:efatariku07@gmail.com" class="btn">Hire</a>
@@ -225,6 +221,7 @@
 
     <script>
         let menulis = document.getElementById('menu-lis')
+        let img = document.getElementById('menu-icon')
         function togglemenu(){
             if(menulis.style.display === 'block'){
                 menulis.style.display = 'none';
@@ -245,7 +242,6 @@
       }
       return color;
     }
-
     function changeColor() {
         const colorbtn = document.getElementById('color')
         const root = document.documentElement;
@@ -254,12 +250,31 @@
         root.style.setProperty('--green', 'red');
         root.style.setProperty('--about-text', 'rgba(228, 90, 90, 0.055)');
         colorbtn.innerHTML = "Green"
+        img.src='./icons/red menu.png'
       } else {
         root.style.setProperty('--green', '#16db65');
         root.style.setProperty('--about-text', 'rgba(136, 228, 90, 0.055)');
         colorbtn.innerHTML = "Red"
+        img.src='./icons/menu.png'
       }
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var cards = document.querySelectorAll('.project-container .card');
+    var projectContainer = document.querySelector('.project-container');
+
+    cards.forEach(function(card) {
+        card.addEventListener('mouseover', function() {
+            projectContainer.classList.add('blur');
+        });
+
+        card.addEventListener('mouseout', function() {
+            projectContainer.classList.remove('blur');
+        });
+    });
+});
+
+
     </script>
 </body>
 </html>

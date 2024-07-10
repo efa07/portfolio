@@ -393,6 +393,22 @@ backdrop-filter: blur(5.9px);
 .card:hover {
     transform: translateY(-10px);
 }
+.card:hover {
+    z-index: 10;
+    transform: scale(1.05);
+    transition: 1s ease-in-out;
+}
+
+.project-container.blur .card {
+    filter: blur(5px);
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+
+.project-container.blur .card:hover {
+    filter: none;
+    pointer-events: auto;
+}
 .card img {
     width: 100%;
     height: 200px;
@@ -557,24 +573,25 @@ backdrop-filter: blur(5.9px);
     .menu-icon{
         margin-top: 10px;
         display: block;
-        width: 55px;
+        width: 65px;
         height: 65px;
+        border-radius: 50%;
         outline: none;
-        border: 1px solid var(--green);
-        background-color: #080808;
+        
     }
     .header .logo{
         font-size: 30px;
     }
     #menu-lis {
         width: 90%;
+        border: 1px solid var(--green);
         position: absolute;
         top:75px;
         right: 0;
         display: none;
         padding: 10px;
         z-index: 3;
-        transition: 2s ease-in-out;
+        transition: 1s ease-in-out;
         background-color: var(--bg);
     background-size: 70px 50px;
     background-image: radial-gradient(
