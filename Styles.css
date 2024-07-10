@@ -3,6 +3,9 @@
     --bg:#080808;
     --about-text: rgba(135, 230, 88, 0.055);
 }
+html{
+    scroll-behavior: smooth;
+}
 .container{
     max-width: calc(100% - 10px);
     margin: 0 auto 0 auto;
