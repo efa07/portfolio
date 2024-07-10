@@ -36,11 +36,13 @@ html{
     transition: all 1s;
     filter: blur(5px);
     transform: translate(-100%);
+    transition: 0.4s ease-in-out;
 }
 .show{
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+    transition: 2s ease-in-out;
 }
 body{
     cursor: none;
@@ -150,6 +152,7 @@ section{
     align-items: center;
     justify-content: space-around;
     grid-area: 15rem; 
+    transition: 2s ease-in-out;
     
 }
 span{
@@ -195,7 +198,7 @@ span{
     width: 30vw;
     box-shadow: 0 0 25px var(--green);
     cursor: pointer;
-    transition: 0.5 ease-in-out;
+    transition: 1s ease-in-out;
     border-radius: 50%;
 }
 .home-img img:hover{
@@ -203,7 +206,7 @@ span{
                 0 0 45px var(--green),
                 0 0 95px var(--green);
     animation: border-animation 3s ease-in-out 0s infinite both;
-    transition: 3s ease-in-out;
+    transition: 1s ease-in-out;
 }
 .animated-text span{
     position: relative;
@@ -286,13 +289,13 @@ span{
 }
 @keyframes border-animation {
     0%{
-        border-radius: 10%;
+        border-radius: 50%;
     }
     50%{
-        border-radius: 55%;
+        border-radius: 10%;
     }
     100%{
-        border-radius: 10%;
+        border-radius: 50%;
     }
 }
 .social-icons {
@@ -463,7 +466,7 @@ backdrop-filter: blur(5.9px);
     text-align: center;
   }
   .section-header h2 {
-    color: #FFF;
+    color: var(--green);
     font-weight: bold;
     font-size: 3em;
     margin-bottom: 20px;
