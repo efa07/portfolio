@@ -17,24 +17,24 @@ html{
   }
   
   .eye {
-    width: 80px;
-    height: 80px;
-    background-color: white;
+    width: 60px;
+    height: 60px;
+    background-color: whitesmoke;
     border-radius: 50%;
-    border: 5px solid var(--green);
+    border: 3px solid var(--green);
     margin: 0 20px;
     position: relative;
   }
   
   .pupil {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border: 2px solid var(--green);
     background-color: black;
     border-radius: 50%;
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: 20%;
+    left: 35%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
@@ -185,7 +185,6 @@ nav{
 section{
     min-height: 100vh;
     padding: 10rem 12% 10rem;
-    
 }
 .home{
     display: flex;
@@ -193,7 +192,6 @@ section{
     justify-content: space-around;
     grid-area: 15rem; 
     transition: 1.5s ease-in-out;
-    
 }
 span{
     color: var(--green);
@@ -213,15 +211,11 @@ span{
     margin-bottom: 2rem;
 }
 .home_container p{
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
-}
-.home_container p{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
+    margin-bottom: 3rem;
 }
 .home-img{
   border-radius: 50%;
@@ -235,7 +229,7 @@ span{
 .home-img img{
     position: relative;
     top:2rem;
-    width: 30vw;
+    width: 25vw;
     box-shadow: 0 0 25px var(--green);
     cursor: pointer;
     transition: 1s ease-in-out;
@@ -250,7 +244,6 @@ span{
 }
 .animated-text span{
     position: relative;
-
 }
 .animated-text span::before{
     content: "Web Developer";

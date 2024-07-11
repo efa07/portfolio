@@ -7,6 +7,7 @@ let menulis = document.getElementById('menu-lis')
                 menulis.style.display='block'
             }
         }
+/* custom cursor */
         document.addEventListener('mousemove', e => {
             const cursor = document.querySelector('.cursor');
             cursor.style.left = e.pageX + 'px';
@@ -36,7 +37,7 @@ let menulis = document.getElementById('menu-lis')
         img.src='./icons/menu.png'
       }
     }
-
+/* card animation */
     document.addEventListener('DOMContentLoaded', function() {
     var cards = document.querySelectorAll('.project-container .card');
     var projectContainer = document.querySelector('.project-container');
@@ -51,6 +52,7 @@ let menulis = document.getElementById('menu-lis')
         });
     });
 });
+/* section animation */
 const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 console.log(entry);
@@ -65,7 +67,7 @@ const observer = new IntersectionObserver((entries) => {
         const hidenele = document.querySelectorAll('.hidden');
         hidenele.forEach((el) => observer.observe(el));
 
-
+/* for the eye*/
         document.addEventListener('mousemove', (event) => {
             const eyes = document.querySelectorAll('.eye');
             eyes.forEach((eye) => {
