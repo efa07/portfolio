@@ -81,3 +81,11 @@ const observer = new IntersectionObserver((entries) => {
               pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
             });
           });
+/* loader */
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("#loader-2").style.display = "block";
+  } else {
+    document.querySelector("#loader-2").style.display = "none";
+  }
+};
