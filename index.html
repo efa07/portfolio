@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./Styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Efa's Portofolio</title>
+    <title>Efa's Portfolio</title>
 </head>
 <body>
     <div class="loader-wrapper" id="loader-2">
@@ -37,7 +37,8 @@
             <img src="./icons/menu.png"  loading="lazy" alt="menu icon" class="menu-icon" id="menu-icon" onclick="togglemenu()">
             <ul class="nav__list " id="menu-lis">
                 <a href="#home" class="nav__link">Home</a>
-               <a href="#about" class="nav__link">About</a>
+                <a href="#skills" class="nav__link">Stack</a>
+                <a href="#services" class="nav__link">Services</a>
                 <a href="#project" class="nav__link">Projects</a>
                 <a href="#contact" class="nav__link">Contact</a>
             </ul>
@@ -46,13 +47,20 @@
 <section class="home hidden" id="home">
     <div class="home_container">
             <h1 class="home_title">Hi, I am <span>Efa</span></h1>
-            <h3 class="animated-text">I'm a:  <span></span></h3>
+            <h3 class="animated-text">I build:  <span></span></h3>
             <p class="home_description">
-                I'm a web developer and a software engineer.
-                I'm passionate about creating web applications 
-                and software that can help people in their daily life.
-                I am also student at <span><a href="https://www.alxafrica.com/" target="_blank" style="color: inherit;">ALX</a></span>
+                Full‑stack software developer focused on clean architecture, fast performance,
+                and human‑centered UX. I build scalable APIs and modern web apps with a backend‑first mindset.
+                Currently learning and shipping at <span><a href="https://www.alxafrica.com/" target="_blank" style="color: inherit;">ALX</a></span>.
             </p>
+            <div class="hero-badges">
+                <span class="badge">Python • Django</span>
+                <span class="badge">FastAPI • Flask</span>
+                <span class="badge">React • Next.js</span>
+                <span class="badge">Node • NestJS</span>
+                <span class="badge">Spring Boot</span>
+                <span class="badge">Docker • Kubernetes</span>
+            </div>
             <div class="social-icons">
                 <div class="icons"><a href="https://github.com/efa07" target="_blank"><i class="fa-brands fa-github"></i></a></div>
                 <div class="icons"><a href="https://t.me/@Efa_Tariku" target="_blank"><i class="fa-brands fa-telegram" ></i></a></div>
@@ -61,6 +69,7 @@
             </div>
             <div class="btn-group">
                 <a href="mailto:efatariku07@gmail.com" class="btn">Hire</a>
+                <a href="#project" class="btn btn-outline">View Work</a>
                 <button class="btn" onclick="changeColor()" id="color">Theme</button>
             </div>
         </div>
@@ -70,17 +79,66 @@
             </div>
         </div>
 </section>
-<section id="about" class="hidden">
+<section id="skills" class="hidden">
         <div class="about-container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <img src="./img/pk.jpg" alt="efa" class="about-photo"  loading="lazy">
-                <div class="about-text">
-                    <p>Hi, I'm Efa Tariku, a passionate and dedicated software engineering student at ALX School, currently honing my skills to become a full-stack software developer. My journey in tech began with a curiosity for how things work, which soon transformed into a deep-seated passion for coding and problem-solving.</p>
-                    <p>I have completed a comprehensive Responsive Web Design course from freeCodeCamp, where I learned to create visually appealing and user-friendly web interfaces. Additionally, I have strengthened my programming foundation with various Python courses, which have equipped me with the skills to build efficient and scalable software solutions.</p>
-                    <p>My educational journey has been complemented by numerous projects that showcase my ability to apply theoretical knowledge to practical scenarios. Whether it's developing dynamic web applications or writing clean, efficient code, I am committed to continuous learning and improvement.</p>
-                    <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and staying updated with industry trends. My goal is to leverage my skills and knowledge to contribute to impactful projects and grow as a proficient full-stack developer.</p>
-                    <p>Feel free to browse through my portfolio to see some of the projects I've worked on. I'm excited to connect with like-minded professionals and explore opportunities for collaboration.</p>
+            <h2 class="section-title">Tech Stack</h2>
+            <p class="section-subtitle">Backend strength with product polish. I design, build, and ship complete systems.</p>
+            <div class="stack-grid">
+                <div class="stack-card">
+                    <h3>Backend</h3>
+                    <ul class="stack-list">
+                        <li>Python: Django, FastAPI, Flask</li>
+                        <li>Java: Spring Boot</li>
+                        <li>Node.js: Express, NestJS</li>
+                        <li>APIs: REST, auth, integrations</li>
+                    </ul>
+                </div>
+                <div class="stack-card">
+                    <h3>Frontend</h3>
+                    <ul class="stack-list">
+                        <li>React, Next.js, TypeScript</li>
+                        <li>Responsive UI + accessibility</li>
+                        <li>Design systems and component libraries</li>
+                    </ul>
+                </div>
+                <div class="stack-card">
+                    <h3>DevOps & Tooling</h3>
+                    <ul class="stack-list">
+                        <li>Docker, Kubernetes</li>
+                        <li>Git, GitHub</li>
+                        <li>CI/CD and containerized deployments</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="stack-badges">
+                <span class="badge">API‑First</span>
+                <span class="badge">System Design</span>
+                <span class="badge">Performance‑Focused</span>
+                <span class="badge">DX & Clean Code</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="hidden">
+        <div class="about-container">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">From idea to deployment, I help teams launch reliable software.</p>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Full‑Stack Product Builds</h3>
+                    <p>End‑to‑end web apps with modern UX, scalable APIs, and clean architecture.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Backend & API Engineering</h3>
+                    <p>Robust services, authentication, integrations, and data flows built to scale.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Frontend Systems</h3>
+                    <p>Fast, accessible interfaces using React/Next.js with reusable components.</p>
+                </div>
+                <div class="service-card">
+                    <h3>DevOps & Deployment</h3>
+                    <p>Containerized delivery with Docker/Kubernetes and production‑ready pipelines.</p>
                 </div>
             </div>
         </div>
