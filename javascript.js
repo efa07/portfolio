@@ -89,3 +89,78 @@ document.onreadystatechange = function () {
     document.querySelector("#loader-2").style.display = "none";
   }
 };
+
+/* background pulsating stars */
+(function initStarBackground() {
+  const canvas = document.getElementById('bg-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width = 0;
+  let height = 0;
+  let dpr = window.devicePixelRatio || 1;
+  let dots = [];
+
+  function getThemeColor() {
+    const root = document.documentElement;
+    return getComputedStyle(root).getPropertyValue('--green').trim() || '#16db65';
+  }
+
+  function resize() {
+    dpr = window.devicePixelRatio || 1;
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    initDots();
+  }
+
+  function initDots() {
+    dots = [];
+    const density = width * height < 450000 ? 14000 : 11000;
+    const count = Math.max(30, Math.floor((width * height) / density));
+    for (let i = 0; i < count; i += 1) {
+      dots.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: Math.random() * 1.2 + 0.6,
+        speed: Math.random() * 0.002 + 0.001, // pulse speed
+        offset: Math.random() * Math.PI * 2,
+        sparkUntil: 0,
+      });
+    }
+  }
+
+  function draw(now = 0) {
+    ctx.clearRect(0, 0, width, height);
+    const color = getThemeColor();
+
+    for (const dot of dots) {
+      // random spark boost
+      if (dot.sparkUntil < now && Math.random() < 0.002) {
+        dot.sparkUntil = now + 600 + Math.random() * 600;
+      }
+
+      const base = 0.7 + 0.5 * (0.5 + 0.5 * Math.sin(now * dot.speed + dot.offset));
+      const sparkBoost = dot.sparkUntil > now ? 1.6 : 1;
+      const radius = dot.r * base * sparkBoost;
+      const alpha = Math.min(1, 0.35 * sparkBoost + 0.25 * base);
+
+      ctx.fillStyle = color;
+      ctx.globalAlpha = alpha;
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  requestAnimationFrame(draw);
+})();
